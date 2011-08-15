@@ -471,7 +471,7 @@ public class ContextIO {
 			baseUrl = URLUtils.appendParametersToQueryString(baseUrl, params);
 		}
 
-		OAuthService service = new ServiceBuilder().provider(ContextIOApi.class).apiKey("ptj7pndz").apiSecret("QJnoEhwcdpmwNznA").build();
+		OAuthService service = new ServiceBuilder().provider(ContextIOApi.class).apiKey(this.key).apiSecret(this.secret).build();
 		OAuthRequest request = new OAuthRequest(Verb.GET, baseUrl);
 		
 		Token nullToken = new Token("", "");
