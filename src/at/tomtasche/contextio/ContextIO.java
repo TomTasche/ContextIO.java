@@ -1,5 +1,6 @@
 package at.tomtasche.contextio;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -150,7 +151,9 @@ public class ContextIO {
 	 * @param saveAs Path to local file where the attachment should be saved to.
 	 * @return mixed
 	 */
-	// TODO: public function downloadFile(String account, Map<String, String> params, File saveAs) {
+	public void downloadFile(String account, Map<String, String> params, File saveAs) {
+		throw new UnsupportedOperationException("Not yet implemented, sorry.");
+	}
 
 	/**
 	 * Returns a list of revisions attached to other emails in the 
@@ -458,6 +461,8 @@ public class ContextIO {
 	}
 
 	public ContextIOResponse doCall(String method, String account, String action, Map<String, String> params) {
+		// TODO: differs from original implementiation
+		
 		if (account != null && !account.equals("")) {
 			if (params == null) {
 				params = new HashMap<String, String>();
